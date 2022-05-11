@@ -13,29 +13,33 @@ NOTES!!!
 READ CONTRACT
 
 owner
+
 Returns the address of the current owner
 
 WRITE CONTRACT
 
-renounceOwnership 
 function renounceOwnership()
+
 Leaves the contract without owner. It will not be possible to call onlyOwner functions anymore. Can only be called by the current owner.
 NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.
 
-sendTokensToUsers
+
 function sendTokensToUsers( address token, address[] memory users, uint[] memory amounts)
+
 token - address of the token, which you want to multisend 
 users - the array of addresses of recipients  
 amounts - the array of the amounts to send to recipients
 Multisender function. Creates the data (list address-amount) and send it in one transaction from this contract.
 
-transferOwnership
+
 function transferOwnership(address newOwner)
+
 newOwner - the address of new owner of the contract
 Sets the new owner of the contract.
 
-withdrawTokens
+
 function withdrawTokens(address token, uint256 amount)
+
 token - the address of the token to send  
 amount - the amount to send
 
